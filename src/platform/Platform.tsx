@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import nagaIconGold from "@/imports/Naga_Construction_logo_white.png";
-import nagaAllWhite from "@/imports/Naga_Construction_logo_all_white.png";
+const nagaIconGold = "/logos/Naga_Construction_logo_white.png";
+const nagaAllWhite = "/logos/Naga_Construction_logo_all_white.png";
 import { useNavigate } from "react-router";
 import { CURRENT_USER, TASKS, CONVERSATIONS, MATERIAL_REQUESTS, PENDING_APPROVALS, MAINTENANCE_REQUESTS } from "../data/dummy";
 import { StaffRole } from "../portals/PlatformGate";

@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { useNavigate as useRouterNavigate } from "react-router";
 import ImageGallery from "./ImageGallery";
 import { ESTATE_IMAGES, STAYS_IMAGES, GENERAL_IMAGES, LISTING_IMAGES } from "@/assets/images";
-import nagaHbLogo from "@/imports/Naga_HummingBird_Logo-3__2_.png";
-import nagaFullLogo from "@/imports/Naga_Construction_logo_full.png";
+const nagaHbLogo = "/logos/Naga_HummingBird_Logo-3__2_.png";
+const nagaFullLogo = "/logos/Naga_Construction_logo_full.png";
 
 type Page = "home" | "about" | "services" | "properties" | "stays" | "contact";
 

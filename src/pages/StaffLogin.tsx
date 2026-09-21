@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate, Link } from "react-router";
 import { StaffRole } from "../portals/PlatformGate";
-import nagaAllWhite from "@/imports/Naga_Construction_logo_all_white.png";
-import nagaNavyLogo from "@/imports/Naga_Construction_logo.png";
+const nagaAllWhite = "/logos/Naga_Construction_logo_all_white.png";
+const nagaNavyLogo = "/logos/Naga_Construction_logo.png";
 
 const STAFF_ROLES: { role: StaffRole; abbr: string; title: string; desc: string; color: string }[] = [
   { role: "ceo", abbr: "CEO", title: "Chief Executive Officer", desc: "Full platform access & final authority", color: "#D4AF37" },
