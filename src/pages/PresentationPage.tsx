@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router";
 import pptxgen from "pptxgenjs";
-import zsquareLogo from "@/imports/logo.png";
+import { getAsset } from "@/utils/assetLoader";
+const zsquareLogo = getAsset("logo");
 import { GENERAL_IMAGES, ESTATE_IMAGES } from "@/assets/images";
 
 // ── Brand tokens ─────────────────────────────────────────────
