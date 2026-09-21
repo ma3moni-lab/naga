@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>You're Offline — NAGA Group</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #0f0d2e;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #fff;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .icon-wrap {
+      width: 88px;
+      height: 88px;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-size: clamp(1.4rem, 5vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.6);
+      max-width: 340px;
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 10px;
+      background: #6B9FE5;
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.1s;
+    }
+
+    .btn:hover { background: #5b8ed4; }
+    .btn:active { transform: scale(0.97); }
+
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: rgba(255,255,255,0.12);
+      margin: 32px auto;
+    }
+
+    .sub {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 28px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(107,159,229,0.5);
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes pulse {
+      0%, 80%, 100% { opacity: 0.35; transform: scale(0.8); }
+      40% { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="dots">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+  <svg class="icon-wrap" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect width="192" height="192" rx="40" fill="#1a1645"/>
+    <path d="M96 28L164 68v96H28V68L96 28z" stroke="#D4AF37" stroke-width="7" fill="none" stroke-linejoin="round"/>
+    <path d="M68 164v-56h56v56" stroke="#6B9FE5" stroke-width="7" fill="none" stroke-linejoin="round"/>
+    <rect x="82" y="68" width="28" height="28" rx="3" fill="#D4AF37" fill-opacity="0.85"/>
+  </svg>
+
+  <h1>You're offline</h1>
+  <p>No internet connection detected. Check your network and try again — your work is safe.</p>
+
+  <button class="btn" onclick="window.location.reload()">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="1 4 1 10 7 10"/>
+      <path d="M3.51 15a9 9 0 1 0 .49-3.85"/>
+    </svg>
+    Try again
+  </button>
+
+  <div class="divider"></div>
+  <p class="sub">NAGA Group Operations Platform</p>
+</body>
+</html>

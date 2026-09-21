@@ -1,0 +1,11 @@
+{
+  "name": "NAGA Group — Operations Platform",
+  "description": "Unified operations platform for NAGA Group and its subsidiaries — construction, estates, procurement, finance, stays and property management.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
