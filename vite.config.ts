@@ -26,12 +26,11 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
-        'pptxgenjs': path.resolve(__dirname, 'node_modules/pptxgenjs/dist/pptxgen.bundle.js'),
       },
       dedupe: ['react', 'react-dom'],
     },
     optimizeDeps: {
-      include: ['html2canvas'],
+      include: ['react', 'react-dom', 'react-router', 'recharts'],
     },
     server: {
       host: '0.0.0.0',

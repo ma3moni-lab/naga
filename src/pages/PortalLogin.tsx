@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router";
-import { getAsset } from "@/utils/assetLoader";
-const nagaHbLogo = getAsset("Naga_HummingBird_Logo-3__2_");
+import nagaHbLogo from "@/imports/Naga_HummingBird_Logo-3__2_.png";
 
 type Portal = "resident" | "guest";
 

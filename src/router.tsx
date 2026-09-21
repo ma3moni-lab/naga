@@ -1,4 +1,4 @@
-import { createBrowserRouter, Outlet, useLocation } from "react-router";
+import { createBrowserRouter, Navigate, Outlet, useLocation } from "react-router";
 import { lazy, Suspense } from "react";
 import type { ReactNode } from "react";
 import { PageSkeleton, WebSkeleton } from "@/components/PageSkeleton";
@@ -10,8 +10,6 @@ const StaffLogin = lazy(() => import("./pages/StaffLogin"));
 const ResidentPortalPage = lazy(() => import("./pages/ResidentPortalPage"));
 const GuestPortalPage = lazy(() => import("./pages/GuestPortalPage"));
 const StaffDashboard = lazy(() => import("./pages/StaffDashboard"));
-const PresentationPage = lazy(() => import("./pages/PresentationPage"));
-const HopePage = lazy(() => import("./pages/HopePage"));
 
 function Wrap({ children, isAdmin }: { children: ReactNode; isAdmin?: boolean }) {
   const location = useLocation();
@@ -46,8 +44,7 @@ export const router = createBrowserRouter([
       { path: "/admin/guest", element: <Wrap isAdmin><GuestPortalPage /></Wrap> },
       { path: "/admin/staff", element: <Wrap><StaffLogin /></Wrap> },
       { path: "/admin/staff/dashboard", element: <Wrap isAdmin><StaffDashboard /></Wrap> },
-      { path: "/presentation", element: <Wrap><PresentationPage /></Wrap> },
-      { path: "/hope", element: <Wrap><HopePage /></Wrap> },
+      { path: "*", element: <Navigate to="/" replace /> },
     ],
   },
 ]);

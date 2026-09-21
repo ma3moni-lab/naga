@@ -2,9 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { useNavigate as useRouterNavigate } from "react-router";
 import ImageGallery from "./ImageGallery";
 import { ESTATE_IMAGES, STAYS_IMAGES, GENERAL_IMAGES, LISTING_IMAGES } from "@/assets/images";
-import { getAsset } from "@/utils/assetLoader";
-const nagaHbLogo   = getAsset("Naga_HummingBird_Logo-3__2_");
-const nagaFullLogo = getAsset("Naga_Construction_logo_full");
+import nagaHbLogo from "@/imports/Naga_HummingBird_Logo-3__2_.png";
+import nagaFullLogo from "@/imports/Naga_Construction_logo_full.png";
 
 type Page = "home" | "about" | "services" | "properties" | "stays" | "contact";
 
@@ -192,8 +191,8 @@ export default function Website({ onEnterPlatform }: Props) {
       {modal && <DetailModal data={modal} onClose={() => setModal(null)} onNavigate={navigate} onEnterPlatform={onEnterPlatform} />}
 
       {/* NAV */}
-      <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-400"
-        style={{ background: navBg ? "rgba(255,255,255,0.97)" : "transparent", backdropFilter: navBg ? "blur(12px)" : "none", borderBottom: navBg ? "1px solid #E8EAF0" : "none" }}>
+      <nav className="fixed left-0 right-0 z-50 transition-all duration-400"
+        style={{ top: "var(--demo-bar-h, 0px)", background: navBg ? "rgba(255,255,255,0.97)" : "transparent", backdropFilter: navBg ? "blur(12px)" : "none", borderBottom: navBg ? "1px solid #E8EAF0" : "none" }}>
         <div className="max-w-7xl mx-auto px-6 flex items-center h-[76px] gap-8">
           <button onClick={() => navigate("home")} className="flex items-center shrink-0">
             <img

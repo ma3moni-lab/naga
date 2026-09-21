@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { getAsset } from "@/utils/assetLoader";
-const nagaIconGold = getAsset("Naga_Construction_logo_white");
-const nagaAllWhite = getAsset("Naga_Construction_logo_all_white");
+import nagaIconGold from "@/imports/Naga_Construction_logo_white.png";
+import nagaAllWhite from "@/imports/Naga_Construction_logo_all_white.png";
 import { useNavigate } from "react-router";
 import { CURRENT_USER, TASKS, CONVERSATIONS, MATERIAL_REQUESTS, PENDING_APPROVALS, MAINTENANCE_REQUESTS } from "../data/dummy";
 import { StaffRole } from "../portals/PlatformGate";
@@ -466,8 +465,9 @@ export default function Platform({ onExitPlatform, staffRole = "ceo" }: Props) {
 
       {/* ── MOBILE DRAWER ── */}
       <div
-        className="fixed top-0 left-0 bottom-0 z-50 md:hidden flex flex-col transition-transform duration-300"
+        className="fixed left-0 bottom-0 z-50 md:hidden flex flex-col transition-transform duration-300"
         style={{
+          top: "var(--demo-bar-h, 0px)",
           width: "280px",
           background: "#1a1645",
           borderRight: "1px solid #231e55",

@@ -70,13 +70,6 @@
       "url": "/admin/guest",
       "description": "NAGA Stays booking portal",
       "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
-    },
-    {
-      "name": "HOPE-SP Presentation",
-      "short_name": "HOPE-SP",
-      "url": "/hope",
-      "description": "eTranzact HOPE-SP proposal",
-      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
     }
   ],
   "protocol_handlers": [],

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
-import { getAsset } from "@/utils/assetLoader";
-const nagaLogo = getAsset("Naga_Construction_logo");
+import nagaLogo from "@/imports/Naga_Construction_logo.png";
 
 const POPUP_KEY = "naga_demo_popup_seen";
 const BAR_KEY = "naga_demo_bar_hidden";
