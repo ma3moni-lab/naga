@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'naga-v4';
+const CACHE_VERSION = 'naga-v5';
 const STATIC_CACHE  = `${CACHE_VERSION}-static`;
 const DYNAMIC_CACHE = `${CACHE_VERSION}-dynamic`;
 const IMAGE_CACHE   = `${CACHE_VERSION}-images`;
@@ -14,7 +14,6 @@ const PRECACHE_ROUTES = [
   '/admin/resident',
   '/admin/guest',
   '/admin/staff/dashboard',
-  '/hope',
 ];
 
 const STATIC_EXTS   = /\.(js|css|woff2?|ttf|otf)(\?.*)?$/;
