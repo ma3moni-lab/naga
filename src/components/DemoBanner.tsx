@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
-const nagaLogo = "/logos/Naga_Construction_logo.png";
+import { LOGOS } from "@/utils/logos";
+const nagaLogo = LOGOS.construction;
 
 const POPUP_KEY = "naga_demo_popup_seen";
 const BAR_KEY = "naga_demo_bar_hidden";
